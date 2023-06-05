@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body{
-    font-family: fantasy;
+    font-family: sans-serif;
+
 }

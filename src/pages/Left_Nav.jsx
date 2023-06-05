@@ -5,9 +5,7 @@ import {
   Refresh,
   SearchOutlined,
   Storage,
-  VideoLabelSharp,
 } from "@material-ui/icons";
-import React from "react";
 
 function Left_Nav() {
   return (
