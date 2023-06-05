@@ -3,10 +3,12 @@ import { ArrowDropDown, ArrowDropDownCircleOutlined } from "@material-ui/icons";
 // import CommitIcon from "@mui/icons-material/Commit";
 function Header() {
   return (
-    <div className=" flex justify-between bg-gray-800 w-full h-16 text-white  items-center">
-      <div className="flex items-center justify-between h-full ">
+    <div className=" flex justify-between bg-gray-800  h-16 text-white  items-center">
+      <div className="flex items-center justify-around h-full w-5/12 ml-3 ">
         <div className="flex items-center">
-          <Typography className="">Project Name</Typography>
+          <Typography variant="p " className="">
+            Project Name
+          </Typography>
           <span className="pl-2">
             <ArrowDropDownCircleOutlined />
           </span>
