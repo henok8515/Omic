@@ -1,8 +1,9 @@
 import { Typography } from "@material-ui/core";
+import FolderStructure from "../components/FolderStructure";
 
 function Left_Content() {
   return (
-    <div className="w-1/5 text-xs  bg-gray-600 max-h-screen">
+    <div className="p-5 flex flex-col w-1/5 text-xs  bg-gray-600 max-h-screen">
       <Typography variant="h5" className="p-3 font-extrabold text-white ">
         Files
       </Typography>
@@ -24,6 +25,9 @@ function Left_Content() {
             config
           </span>{" "}
           <Typography>dataform</Typography>
+        </div>
+        <div className="flex  ml-6">
+          <FolderStructure />
         </div>
       </div>
     </div>

@@ -1,7 +1,70 @@
-import { ChevronRightOutlined, ExpandMoreOutlined } from "@material-ui/icons";
+import {
+  ChevronRightOutlined,
+  ExpandMoreOutlined,
+  Visibility,
+  VisibilityOff,
+} from "@material-ui/icons";
 import { TreeItem, TreeView } from "@material-ui/lab";
+import { useState } from "react";
 
-export default function FileSystemNavigator() {
+export default function Tree_View() {
+  const [Data] = useState([
+    {
+      id: 1,
+      name: "demo1",
+      data: [
+        {
+          name: "dataset_1",
+          isDisabled: false,
+          id: Date.now(),
+          catagories: "demo1",
+        },
+        {
+          name: "dataset_2",
+          isDisabled: false,
+          id: Date.now(),
+          catagories: "demo1",
+        },
+        {
+          name: "dataset_3",
+          isDisabled: false,
+          id: Date.now(),
+          catagories: "demo2",
+        },
+        {
+          name: "dataset_4",
+          isDisabled: true,
+          id: Date.now(),
+          catagories: "demo",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "demo2",
+      data: [
+        {
+          name: "dataset_1",
+          isDisabled: false,
+          id: Date.now(),
+          catagories: "demo1",
+        },
+        {
+          name: "dataset_2",
+          isDisabled: false,
+          id: Date.now(),
+          catagories: "demo1",
+        },
+        {
+          name: "dataset_3",
+          isDisabled: false,
+          id: Date.now(),
+          catagories: "demo2",
+        },
+      ],
+    },
+  ]);
+
   return (
     <TreeView
       aria-label="file system navigator"
@@ -9,23 +72,24 @@ export default function FileSystemNavigator() {
       defaultExpandIcon={<ChevronRightOutlined />}
       sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
     >
-      <TreeItem nodeId="1" label="datafor_demo">
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
-      </TreeItem>
-      <TreeItem nodeId="5" label="dataform_set2">
-        <TreeItem nodeId="10" label="OSS" />
-        <TreeItem nodeId="6" label="MUI">
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
+      {Data.map((data) => (
+        <TreeItem key={data.name} nodeId={data.id} label={data.name}>
+          {data.data.map((data) => (
+            <div key={data.id} className="flex text-sm">
+              {data.isDisabled ? (
+                <Visibility
+                  key={data}
+                  // onClick={() => console.log(setData(current))}
+                  fontSize="small"
+                />
+              ) : (
+                <VisibilityOff onClick={() => console.log(!data.isDisabled)} />
+              )}
+              <TreeItem nodeId="2" label={data.name} />
+            </div>
+          ))}
         </TreeItem>
-      </TreeItem>
+      ))}
     </TreeView>
   );
 }

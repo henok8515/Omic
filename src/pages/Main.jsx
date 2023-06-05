@@ -1,8 +1,11 @@
 import { Button, Typography } from "@material-ui/core";
 import {
   ArrowDropDown,
+  FindInPage,
   HelpOutline,
+  Layers,
   MoreHorizOutlined,
+  Refresh,
 } from "@material-ui/icons";
 import Table from "../components/Table";
 import Tree_View from "../components/Tree_View";
@@ -97,13 +100,22 @@ function Main() {
         </div>
       </div>
       <div className=" flex-1  flex flex-col ">
-        <div className="border-b-2 border-black p-4 flex">
-          <Typography>Query result</Typography>
-          <Typography>Schema</Typography>
+        <div className="border-b-2 text-white bg-gray-800 border-black p-4 flex">
+          <div className="flex mr-4">
+            <FindInPage />
+            <Typography>Query result</Typography>
+          </div>
+          <div className="flex">
+            <Layers />
+            <Typography>Schema</Typography>
+          </div>
         </div>
         <div className="flex w-full h-full text-white">
-          <div className="flex flex-col  w-1/4 bg-gray-700 ">
-            <Typography>Refresh</Typography>
+          <div className=" p-6 flex flex-col  w-1/4 bg-gray-700 ">
+            <div className="flex m-2 justify-between w-3/12">
+              <Typography variant="p">Refresh</Typography>
+              <Refresh className="ml-3" />
+            </div>
             <Tree_View />
           </div>
           <div className="border w-3/4 border-indigo-600 text-black ">
