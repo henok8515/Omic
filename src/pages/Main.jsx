@@ -9,112 +9,99 @@ import {
 } from "@material-ui/icons";
 import Table from "../components/Table";
 import Tree_View from "../components/Tree_View";
+import Editor from "../components/Editor";
 
 function Main() {
   return (
-    <div className="flex-1   flex flex-col max-h-full">
-      <div className=" flex  flex-1 ">
-        <div style={{}} className="w-3/4  border-b-2 border-black  ">
-          hello
+    <div className="flex-1   flex flex-col ">
+      <div className=" flex h-full  flex-1  ">
+        <div style={{}} className="w-3/4 bg-gray-700 h-full    ">
+          <div className="flex justify-between items-center  text-white p-2 border-gray-500 border-b-2">
+            <p>definatin/1_sample_examples/dataset.sql</p>
+            <button className="bg-gray-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+              save
+            </button>
+          </div>
+          <div className="flex h-5/6 w-full justify-center overflow-hidden">
+            <Editor />
+          </div>
         </div>
 
-        <div className="border-s-2 b text-xs border-gray-200 flex flex-col justify-evenly bg-gray-700 text-white w-1/3">
-          <div className="flex  p-2 w-full justify-evenly ">
-            <Typography
-              className="underline text-base underline-offset-8 flex1  "
-              variant="p"
-            >
+        <div className="border-s-2 b text-xs border-gray-500 flex flex-col h-full bg-gray-700 h-full text-white w-1/3">
+          <div className="flex w-full justify-around ">
+            <p className="underline text-sm underline-offset-8  text-gray-200 dark:text-gray-400  ">
               Outline
-            </Typography>
-            <Typography
-              className="underline text-base underline-offset-8 flex1  "
-              variant="p"
-            >
+            </p>
+            <p className="underline text-sm underline-offset-8  text-gray-200 dark:text-gray-400  ">
               Documentation
-            </Typography>
+            </p>
           </div>
 
-          <div className="flex mx-2 my-4 text-yellow-300">
-            <HelpOutline />
-            <Typography className=" text-sm underline-offset-8 flex1  ">
-              No Complition issue
-            </Typography>
+          <div className="flex mx-1 mt-2 text-yellow-300">
+            <HelpOutline fontSize="small" />
+            <p className="text-sm  mb-3 text-gray-300 dark:text-gray-400  ">
+              Complition issue
+            </p>
           </div>
-          <div className="flex items-center  w-full ">
-            <div className="flex items-center  w-full ml-4">
-              <span className="rounded-full mr-2 py-1 px-3 text-white bg-teal-500">
+          <div className="flex items-center  w-full mb-2">
+            <div className="flex items-center  w-full ml-4 ">
+              <span className="rounded-full mr-1  px-3 text-white bg-teal-500">
                 table
               </span>
-              <Typography>dataset -2_with_ref</Typography>
+              <p className="text-sm underline-offset-8  text-gray-200 dark:text-gray-400  ">
+                dataset_2_with_rf
+              </p>
             </div>
             <MoreHorizOutlined className="mr-3" />
           </div>
-          <hr className="mt-2" />
-          <div className="flex items-center justify-between m-3">
-            <Typography>Dependencies</Typography>
+          <hr className="" />
+          <div className="flex items-center justify-between m-1">
+            <Typography variant="p">Dependencies</Typography>
             <div className="flex items-center">
-              <p className=" p-1">3</p>
+              <p className=" ">3</p>
               <ArrowDropDown />
             </div>
           </div>
           <hr className="mt-2" />
-          <div className="flex items-center justify-between m-3">
-            <Typography>Compiled</Typography>
+          <div className="flex items-center justify-between m-1">
+            <Typography variant="p">Compiled</Typography>
             <div className="flex items-center">
               <ArrowDropDown />
             </div>
           </div>
-          <hr className="mt-2" />
-          <div className="flex items-center justify-between m-3">
-            <Typography>Query</Typography>
+          <hr className="" />
+          <div className="flex items-center justify-between m-1">
+            <Typography variant="p">Query</Typography>
             <div className="flex items-center">
               <ArrowDropDown />
             </div>
           </div>
-          <div className="flex justify-center">
-            <Button
-              style={{
-                backgroundColor: "#475569",
-                color: "white",
-                margin: "15px 10px",
-                padding: "10px 20px",
-                fontSize: "small",
-              }}
-            >
-              Execute query
-            </Button>
-            <Button
-              style={{
-                backgroundColor: "#2563EB",
-                color: "white",
-                fontSize: "small",
-                // padding: "10px",
-                margin: "15px 10px",
-              }}
-              className=""
-              variant="contained"
-            >
-              Run this node
-            </Button>
+          <div className="flex justify-around">
+            <button className="bg-gray-600  text-sm  text-white font-bold py-2 px-2 rounded">
+              execute Query
+            </button>
+            <button className="bg-blue-500 text-sm  text-white font-bold py-2 px-2 rounded">
+              Run this Node
+            </button>
           </div>
         </div>
       </div>
       <div className=" flex-1  flex flex-col ">
-        <div className="border-b-2 text-white bg-gray-800 border-black p-4 flex">
-          <div className="flex mr-4">
-            <FindInPage />
-            <Typography>Query result</Typography>
+        <div className="border-b-2 text-white bg-gray-800 border-gray-500 p-2 flex">
+          <div className="flex mr-4 items-center">
+            <FindInPage fontSize="small" />
+            <Typography variant="p">Query result</Typography>
           </div>
-          <div className="flex">
-            <Layers />
-            <Typography>Schema</Typography>
+          <div className="flex items-center">
+            <Layers fontSize="small" />
+            <Typography variant="p">Schema</Typography>
           </div>
         </div>
         <div className="flex w-full h-full text-white">
-          <div className=" p-6 flex flex-col  w-1/4 bg-gray-700 ">
-            <div className="flex m-2 justify-between w-3/12">
+          <div className=" p-2 flex flex-col  w-1/4 bg-gray-800 ">
+            <div className="flex   mb-2 items-center justify-between w-3/12">
               <Typography variant="p">Refresh</Typography>
-              <Refresh className="ml-3" />
+              <Refresh fontSize="small" className=" ml-2" />
             </div>
             <Tree_View />
           </div>

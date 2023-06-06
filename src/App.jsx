@@ -5,7 +5,7 @@ import Left_Content from "./pages/Left_Content";
 import Main from "./pages/Main";
 function App() {
   return (
-    <div className=" overflow-hidden  flex flex-col  justify-center items-center  h-screen w-screen  ">
+    <div className=" overflow-hidden  text-sm flex flex-col  justify-center items-center  h-screen w-screen  ">
       <div className="flex h-full w-full rounded-md  bo">
         <Left_Nav />
         <div className="w-full">

@@ -70,12 +70,23 @@ export default function Tree_View() {
       aria-label="file system navigator"
       defaultCollapseIcon={<ExpandMoreOutlined />}
       defaultExpandIcon={<ChevronRightOutlined />}
-      sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
+      sx={{
+        height: 240,
+        flexGrow: 1,
+        maxWidth: 400,
+        overflowY: "auto",
+        fontSize: "10px",
+      }}
     >
       {Data.map((data) => (
-        <TreeItem key={data.name} nodeId={data.id} label={data.name}>
+        <TreeItem
+          className="text-sm"
+          key={data.name}
+          nodeId={data.id}
+          label={data.name}
+        >
           {data.data.map((data) => (
-            <div key={data.id} className="flex text-sm">
+            <div key={data.id} className="flex  text-base">
               {data.isDisabled ? (
                 <Visibility
                   key={data}
@@ -85,7 +96,19 @@ export default function Tree_View() {
               ) : (
                 <VisibilityOff onClick={() => console.log(!data.isDisabled)} />
               )}
-              <TreeItem nodeId="2" label={data.name} />
+              <div>
+                <TreeItem
+                  className="text-sm"
+                  style={{
+                    fontSize: "small",
+                  }}
+                  sx={{
+                    fontSize: "small",
+                  }}
+                  nodeId="2"
+                  label={data.name}
+                />
+              </div>
             </div>
           ))}
         </TreeItem>
