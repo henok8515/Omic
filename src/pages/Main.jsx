@@ -1,4 +1,4 @@
-import { Button, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import {
   ArrowDropDown,
   FindInPage,
@@ -13,10 +13,10 @@ import Editor from "../components/Editor";
 
 function Main() {
   return (
-    <div className="flex-1   flex flex-col ">
-      <div className=" flex h-full  flex-1  ">
+    <div className="flex-1   flex flex-col  ">
+      <div className=" flex h-full   flex-1   ">
         <div style={{}} className="w-3/4 bg-gray-700 h-full    ">
-          <div className="flex justify-between items-center  text-white p-2 border-gray-500 border-b-2">
+          <div className="flex justify-between items-center mt-1  text-white p-2 border-gray-500 border-b-2">
             <p>definatin/1_sample_examples/dataset.sql</p>
             <button className="bg-gray-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
               save
@@ -27,9 +27,9 @@ function Main() {
           </div>
         </div>
 
-        <div className="border-s-2 b text-xs border-gray-500 flex flex-col h-full bg-gray-700 h-full text-white w-1/3">
+        <div className="border-s-2 b text-xs border-gray-500 flex flex-col h-full justify-center bg-gray-700 h-full text-white w-1/4">
           <div className="flex w-full justify-around ">
-            <p className="underline text-sm underline-offset-8  text-gray-200 dark:text-gray-400  ">
+            <p className="underline text-sm underline-offset-8 mb-2  text-gray-200 dark:text-gray-400  ">
               Outline
             </p>
             <p className="underline text-sm underline-offset-8  text-gray-200 dark:text-gray-400  ">
@@ -76,7 +76,7 @@ function Main() {
               <ArrowDropDown />
             </div>
           </div>
-          <div className="flex justify-around">
+          <div className="flex justify-around pt-3">
             <button className="bg-gray-600  text-sm  text-white font-bold py-2 px-2 rounded">
               execute Query
             </button>
@@ -86,7 +86,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className=" flex-1  flex flex-col ">
+      <div className=" h-full flex flex-col ">
         <div className="border-b-2 text-white bg-gray-800 border-gray-500 p-2 flex">
           <div className="flex mr-4 items-center">
             <FindInPage fontSize="small" />
@@ -97,15 +97,15 @@ function Main() {
             <Typography variant="p">Schema</Typography>
           </div>
         </div>
-        <div className="flex w-full h-full text-white">
+        <div className="flex w-full  text-white">
           <div className=" p-2 flex flex-col  w-1/4 bg-gray-800 ">
-            <div className="flex   mb-2 items-center justify-between w-3/12">
+            <div className="flex  items-center justify-between w-3/12">
               <Typography variant="p">Refresh</Typography>
-              <Refresh fontSize="small" className=" ml-2" />
+              <Refresh fontSize="small" className=" m-2" />
             </div>
             <Tree_View />
           </div>
-          <div className="border w-3/4 border-indigo-600 text-black ">
+          <div className="border w-3/4 flex text-gray-200 justify-center bg-gray-800  text-black ">
             <Table />
           </div>
         </div>

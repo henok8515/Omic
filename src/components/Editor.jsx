@@ -11,8 +11,9 @@ export default class Editor extends React.Component {
           width: "90%",
           height: "90%",
         }}
-        mode="javascript"
+        className="bg-transparent text-white"
         theme="dracula"
+        mode="javascript"
       />
     );
   }

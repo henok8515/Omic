@@ -19,22 +19,56 @@ export default function FileSystemNavigator() {
       }
       sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
     >
-      <TreeItem nodeId="1" label="Applications">
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="2" label="Calendar" />
+      <TreeItem nodeId="1" label="model1">
+        <div className="flex justify-start m-0">
+          <span className="rounded-full  py-1 px-3 text-white bg-green-600">
+            SQL
+          </span>{" "}
+          <TreeItem nodeId="2" label="dataset_1" />
+        </div>
+        <div className=" justify-start flex mt-2 items-center m-0">
+          <span className="rounded-full  py-1 px-3 text-white bg-green-600">
+            SQL
+          </span>{" "}
+          <TreeItem nodeId="2" label="dataset_2" />
+        </div>{" "}
+        <div className="flex justify-start w-full  mt-2  m-0">
+          <span className="rounded-full  py-1 px-3 text-white bg-green-600">
+            SQL
+          </span>{" "}
+          <TreeItem nodeId="2" label="dataset_3" />
+        </div>
       </TreeItem>
-      <TreeItem nodeId="5" label="Documents">
-        <TreeItem nodeId="10" label="OSS" />
-        <TreeItem nodeId="10" label="OSS" />
-        <TreeItem nodeId="10" label="OSS" />
-        <TreeItem nodeId="10" label="OSS" />
-        <TreeItem nodeId="6" label="MUI">
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
-          <TreeItem nodeId="8" label="index.js" />
+      <TreeItem nodeId="5" label="model2">
+        <div className="flex justify-start w-full  mt-2  m-0">
+          <span className="rounded-full  py-1 px-3 text-white bg-amber-400">
+            JS
+          </span>{" "}
+          <TreeItem nodeId="2" label="dataset_3" />
+        </div>
+        <div className="flex justify-start w-full  mt-2  m-0">
+          <span className="rounded-full  py-1 px-3 text-white bg-amber-400">
+            JS
+          </span>{" "}
+          <TreeItem nodeId="2" label="dataset_3" />
+        </div>
+        <TreeItem nodeId="6" label="model3">
+          <div className="flex justify-start w-full  mt-2  m-0"></div>
+          <div className="flex justify-start w-full  mt-2  m-0">
+            <span className="rounded-full  py-1 px-3 text-white bg-blue-500">
+              ops
+            </span>{" "}
+            <TreeItem nodeId="2" label="dataset_3" />
+          </div>
+          <div className="flex justify-start w-full  mt-2  m-0">
+            <span
+              className="rounded-full  py-1 px-3 text-white bg-red-400
+            "
+            >
+              assert
+            </span>{" "}
+            <TreeItem nodeId="2" label="dataset_3" />
+          </div>
         </TreeItem>
       </TreeItem>
     </TreeView>
